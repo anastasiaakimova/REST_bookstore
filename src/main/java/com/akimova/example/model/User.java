@@ -23,11 +23,11 @@ public class User {
     @Column(name = "email", nullable = false)
     private String email;
 
-//    @OneToMany(targetEntity=Comment.class, mappedBy = "user")
-//    private List<Comment> comments;
-//
-//    @OneToMany(targetEntity=Order.class, mappedBy = "user")
-//    private List<Order> orders;
+    @OneToMany(targetEntity=Comment.class, mappedBy = "user")
+    private List<Comment> comments;
+
+    @OneToMany(targetEntity=Order.class, mappedBy = "user")
+    private List<Order> orders;
 
     public User() { }
 
@@ -63,21 +63,21 @@ public class User {
         this.email = email;
     }
 
-//    public List<Comment> getComments() {
-//        return comments;
-//    }
-//
-//    public void setComments(List<Comment> comments) {
-//        this.comments = comments;
-//    }
-//
-//    public List<Order> getOrders() {
-//        return orders;
-//    }
-//
-//    public void setOrders(List<Order> orders) {
-//        this.orders = orders;
-//    }
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
 
     @Override
     public String toString() {

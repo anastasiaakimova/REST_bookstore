@@ -33,7 +33,6 @@ public class UserController {
 
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
-
     @RequestMapping( method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> getUserByUsername(@RequestParam(value = "username") String username) {
         if (username == null) {
