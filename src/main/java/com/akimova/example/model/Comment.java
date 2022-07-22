@@ -8,7 +8,7 @@ import java.util.Objects;
 @Entity
 @Data
 @Table(name = "comment")
-public class Comment {
+public class Comment extends AbstractEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

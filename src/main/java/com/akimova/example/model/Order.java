@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "orders")
 @Data
-public class Order {
+public class Order extends AbstractEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

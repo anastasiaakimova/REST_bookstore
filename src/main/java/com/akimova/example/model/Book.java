@@ -8,7 +8,7 @@ import java.util.List;
 @Entity
 @Data
 @Table(name = "books")
-public class Book {
+public class Book extends AbstractEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
