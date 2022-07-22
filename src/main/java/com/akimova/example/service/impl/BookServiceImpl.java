@@ -2,7 +2,7 @@ package com.akimova.example.service.impl;
 
 
 import com.akimova.example.model.Book;
-import com.akimova.example.repo.BookRepo;
+import com.akimova.example.repository.BookRepository;
 import com.akimova.example.service.GeneralService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class BookServiceImpl implements GeneralService<Book> {
     @Autowired
-    BookRepo bookRepo;
+    BookRepository bookRepo;
 
     @Override
     public void save(Book book) {

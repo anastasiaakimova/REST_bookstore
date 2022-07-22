@@ -25,11 +25,4 @@ public class Comment {
     @ManyToOne
     private Book book;
 
-    @Override
-    public String toString() {
-        return "Comment by:"
-                + getUser() +
-                ", to book: " + getBook() +
-                "\nText:" + text;
-    }
 }

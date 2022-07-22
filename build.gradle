@@ -1,0 +1,41 @@
+
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2/')
+    }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter:2.4.2'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.4.2'
+    implementation 'org.springframework.boot:spring-boot-starter-tomcat:2.4.2'
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest:2.4.2'
+    implementation 'mysql:mysql-connector-java:8.0.23'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.4.2'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.29'
+
+}
+
+group = 'com.akimova'
+version = '0.0.1-SNAPSHOT'
+description = 'example'
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
