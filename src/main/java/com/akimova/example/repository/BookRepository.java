@@ -1,4 +1,4 @@
-package com.akimova.example.repo;
+package com.akimova.example.repository;
 
 import com.akimova.example.model.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
