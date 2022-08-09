@@ -1,11 +1,14 @@
 package com.akimova.example.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Data
 @Table(name = "comment")
-public class Comment {
+public class Comment extends AbstractEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,47 +25,4 @@ public class Comment {
     @ManyToOne
     private Book book;
 
-    public Comment() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Book getBook() {
-        return book;
-    }
-
-    public void setBook(Book book) {
-        this.book = book;
-    }
-
-
-    @Override
-    public String toString() {
-        return "Comment by:"
-                + getUser() +
-                ", to book: " + getBook() +
-                "\nText:" + text;
-    }
 }

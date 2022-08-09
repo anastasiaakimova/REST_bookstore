@@ -1,7 +1,7 @@
 package com.akimova.example.service.impl;
 
 import com.akimova.example.model.User;
-import com.akimova.example.repo.UserRepo;
+import com.akimova.example.repository.UserRepository;
 import com.akimova.example.service.GeneralService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import java.util.List;
 public class UserServiceImpl implements GeneralService<User> {
 
     @Autowired
-    UserRepo userRepo;
+    UserRepository userRepo;
 
     @Override
     public void save(User user) {
